@@ -1,5 +1,6 @@
-import logo from './Images/logo2.png'
 import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from './Images/logo2.png'
 import img1 from './Images/carousel/img1.png'
 import img2 from './Images/carousel/img2.png'
 import img3 from './Images/carousel/img3.png'
@@ -9,7 +10,6 @@ import img6 from './Images/carousel/img6.png'
 import img7 from './Images/carousel/img7.png'
 import img8 from './Images/carousel/img8.png'
 import img9 from './Images/carousel/img9.png'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   var date = new Date();
@@ -18,20 +18,19 @@ function App() {
       {/* Navbar */}
       <section className="header">
         <nav>
-          <a href="/"><img src={logo} alt=""></img></a>
+          <a href="/"><img src={logo} alt="logo"></img></a>
           <h2 className="heading">JMI HOSTEL</h2>
           <div className="nav-links" id="navLinks">
-            <span className="icon material-symbols-outlined" onClick="hideMenu()">close</span>
+            {/* <span className="icon material-symbols-outlined" onClick="hideMenu()">close</span> */}
             <ul>
               <li><a href="/">HOME</a></li>
               <li><a href="mess">ABOUT</a></li>
               <li><a href="#contact">CONTACT</a></li>
-              <li><a href="student">LOGIN</a></li>
+              <li><a href="/StudentLogin">LOGIN</a></li>
             </ul>
           </div>
-          <span className="icon material-symbols-outlined" onClick="showMenu()">menu</span>
+          {/* <span className="icon material-symbols-outlined" onClick="showMenu()">menu</span> */}
         </nav>
-
         <div className="text-box">
           <h1>Jamia Millia Islamia</h1>
           <p>Discover the Best Hostel Experience at Jamia Millia Islamia"<br></br>A Safe and Comfortable Stay</p>
