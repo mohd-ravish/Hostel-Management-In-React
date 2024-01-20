@@ -507,7 +507,7 @@ thead td{
 
 @media only screen and (max-width: 600px) {
   .fee {
-    padding: 4px;
+    padding: 5px;
   }
   .mess {
     padding: 5px;
@@ -517,7 +517,7 @@ thead td{
   }
 
   thead td{
-    padding: 2px;
+    padding: 0px;
   }
 
   .feeSchedule h1 {
