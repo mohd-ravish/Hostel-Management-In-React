@@ -6,6 +6,7 @@ import StudentLogin from './Components/student-login';
 import AdminLogin from './Components/Admin-Login';
 import Rules from './Components/Rules'
 import Fee from './Components/Fee'
+import Mess from './Components/Mess'
 
 import {
   createBrowserRouter,
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/Fee",
     element: <Fee />
+  },
+  {
+    path: "/Mess",
+    element: <Mess />
   },
 ]);
 

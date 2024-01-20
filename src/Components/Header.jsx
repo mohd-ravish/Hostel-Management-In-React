@@ -18,7 +18,7 @@ function Header() {
                                 <a class="nav-link" aria-current="page" href="/">Home</a>
                             </li>
                             <li class=" nav-item">
-                                <a class="nav-link" aria-current="page" href="mess">Mess</a>
+                                <a class="nav-link" aria-current="page" href="/Mess">Mess</a>
                             </li>
                             <li class=" nav-item">
                                 <a class="nav-link" aria-current="page" href="/Fee">Fee Structure</a>

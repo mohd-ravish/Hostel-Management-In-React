@@ -103,7 +103,7 @@ function About() {
                         </thead>
                         <tbody>
                             <tr class="table">
-                                <td>general</td>
+                                <td>General</td>
                                 <td>2600</td>
                                 <td>26000</td>
                                 <td>As per Mess Menu</td>
