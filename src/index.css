@@ -171,13 +171,20 @@
    padding: 10px 0px 0px 10px;
  }
 
+ @media only screen and (max-width: 540px) {
+   iframe {
+     width: 335px;
+     height: 250px;
+     padding: 10px 10px 10px 10px;
+   }
+ }
+
  /* carousel */
  .carousel-indicators [data-bs-target] {
    border-radius: 100%;
    width: 10px;
    height: 10px;
  }
-
 
  /* contact */
  #contact {
@@ -232,19 +239,19 @@
  }
 
  .admin-login-page {
-  background-image: url(./Components/Images/login-img.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  margin: 0;
-  font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-  height: 100vh;
-  /* display: flex; */
-}
+   background-image: url(./Components/Images/login-img.png);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   margin: 0;
+   font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+   height: 100vh;
+   /* display: flex; */
+ }
 
  /* navbar */
  .logo {
-  transform: rotate(2.5deg);
+   transform: rotate(1deg);
    width: 60px;
  }
 
@@ -260,7 +267,7 @@
    width: 100%;
  }
 
- .navbar li a {
+ .student-login-page li a {
    border: #ffffff solid 1px;
    border-radius: 10px;
    margin-right: 35px;
@@ -269,7 +276,21 @@
    color: aliceblue;
  }
 
- .navbar li a:hover {
+ .student-login-page li a:hover {
+   background-color: white;
+   color: black;
+ }
+
+ .admin-login-page li a {
+   border: #ffffff solid 1px;
+   border-radius: 10px;
+   margin-right: 35px;
+   font-size: 18px;
+   font-family: Verdana;
+   color: aliceblue;
+ }
+
+ .admin-login-page li a:hover {
    background-color: white;
    color: black;
  }
@@ -365,3 +386,154 @@
    color: #ffffff;
    cursor: pointer;
  }
+
+ /* Header */
+ .about-logo {
+   padding-bottom: 2px;
+   width: 40px;
+   transform: rotate(-3deg);
+ }
+
+ .about-heading {
+   margin-left: 20px;
+   padding-top: 10px;
+   font-family: 'Alegreya Sans SC', sans-serif;
+   color: rgb(255, 255, 255);
+ }
+
+ .nav-bg {
+   position: sticky;
+   top: 0;
+   z-index: 2;
+ }
+
+ #about-navbar {
+   background-color: rgb(67, 67, 67);
+   width: 100%;
+ }
+
+ #about-navbar li a {
+   margin-right: 50px;
+   font-size: 18px;
+   font-family: 'Poppins', sans-serif;
+   color: aliceblue;
+ }
+
+ #about-navbar li a:hover {
+   color: rgb(211, 211, 211);
+ }
+
+ /* Rules & Regulations */
+.rules h1{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.rules h4{
+  padding-bottom: 10px;
+}
+
+.rules .head{
+  text-align: center;
+}
+
+.rules section{
+  text-align: justify;
+  padding: 40px 300px 15px 300px;
+}
+
+footer {
+  background-color: rgb(225, 224, 224);
+  padding: 40px 300px 10px 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .rules section{
+    padding: 15px;
+  }
+  footer {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  row-gap: 10px;
+  padding-bottom: 30px;
+}
+
+/* Fee/ Schedule/ Payment  */
+.feeSchedule h2 {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.feeSchedule h4 {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.feeSchedule h5 {
+  padding-bottom: 50px;
+}
+
+thead td{
+  background-color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.fee {
+  text-align: center;
+  padding: 40px 300px 0px 300px;
+}
+.mess {
+  text-align: center;
+  padding: 120px 300px 0px 300px;
+}
+
+.schedule {
+  text-align: justify;
+  padding: 120px 300px 0px 300px;
+  line-height: 30px;
+}
+
+.payment {
+  text-align: left;
+  padding-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fee {
+    padding: 0px;
+  }
+  .mess {
+    padding: 0px;
+  }
+  .schedule {
+    padding: 10px;
+  }
+
+  .feeSchedule h1 {
+    text-align: center;
+    padding-top: 20px;
+  }  
+
+  .feeSchedule h2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .feeSchedule h4 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .feeSchedule h5 {
+    padding-bottom: 10px;
+  }
+
+}

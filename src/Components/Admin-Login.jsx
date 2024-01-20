@@ -1,4 +1,4 @@
-import logo from "./Images/logo.png"
+import logo from "./Images/logo3.png"
 
 function AdminLogin() {
 
