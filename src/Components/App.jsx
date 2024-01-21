@@ -89,7 +89,7 @@ function App() {
       <Carousel>
         <Carousel.Item>
           <img style={{ height: '90vh' }}
-            className="d-block w-100"
+            className="carousel-image d-block w-100"
             src={img1}
             alt="First slide"
           />

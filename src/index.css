@@ -186,6 +186,13 @@
    height: 10px;
  }
 
+ @media only screen and (max-width: 540px) {
+  carousel-img{
+  /* height: 250px; */
+ }
+}
+ 
+
  /* contact */
  #contact {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -223,8 +230,7 @@
 
  .fa-envelope {
    color: #be5b52;
- }
-
+ } 
 
  /* background */
  .student-login-page {
@@ -238,6 +244,13 @@
    /* display: flex; */
  }
 
+ @media (max-width: 768px) {
+  .student-login-page {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
  .admin-login-page {
    background-image: url(./Components/Images/login-img.png);
    background-repeat: no-repeat;
@@ -248,6 +261,13 @@
    height: 100vh;
    /* display: flex; */
  }
+
+ @media (max-width: 768px) {
+  .admin-login-page {
+    background-size: cover;
+    background-position: center;
+  }
+}
 
  /* navbar */
  .logo {
