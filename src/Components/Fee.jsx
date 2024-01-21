@@ -47,7 +47,7 @@ function About() {
                                 <td>1000</td>
                             </tr>
                             <tr class="table">
-                                <td>Hostel Function/Sports/Magzine/Student Welfare Fund</td>
+                                <td>Hostel Function/<br></br>Sports/Magzine/<br></br>Student Welfare Fund</td>
                                 <td>500</td>
                                 <td>500</td>
                             </tr>
@@ -67,7 +67,7 @@ function About() {
                                 <td>2000</td>
                             </tr>
                             <tr class="table">
-                                <td>Caution Money (Refundable)</td>
+                                <td>Caution Money<br></br>(Refundable)</td>
                                 <td>500</td>
                                 <td>NIL</td>
                             </tr>
