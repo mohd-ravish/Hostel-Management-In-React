@@ -103,8 +103,8 @@ function App() {
       {/* Carousel */}
       <Carousel>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="carousel-image d-block w-100"
+          <img
+            className="d-block w-100"
             src={img1}
             alt="First slide"
           />
@@ -114,7 +114,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
+          <img 
             className="d-block w-100"
             src={img2}
             alt="Second slide"
@@ -125,8 +125,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="d-block w-100"
+          <img className="d-block w-100"
             src={img3}
             alt="Third slide"
           />
@@ -138,8 +137,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="d-block w-100"
+          <img className="d-block w-100"
             src={img4}
             alt="First slide"
           />
@@ -149,8 +147,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="d-block w-100"
+          <img className="d-block w-100"
             src={img5}
             alt="First slide"
           />
@@ -160,8 +157,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="d-block w-100"
+          <img className="d-block w-100"
             src={img6}
             alt="First slide"
           />
@@ -171,8 +167,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="d-block w-100"
+          <img className="d-block w-100"
             src={img7}
             alt="First slide"
           />
@@ -182,8 +177,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="d-block w-100"
+          <img className="d-block w-100"
             src={img8}
             alt="First slide"
           />
@@ -193,8 +187,7 @@ function App() {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{ height: '90vh' }}
-            className="d-block w-100"
+          <img className="d-block w-100"
             src={img9}
             alt="First slide"
           />

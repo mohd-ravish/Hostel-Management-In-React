@@ -83,13 +83,14 @@
    .nav-links ul li {
      border: 1px solid rgb(255, 255, 255);
      border-radius: 10px;
-     margin: 4px;
+     margin: 3.5px;
      padding: 0px;
    }
+
    .nav-links ul li::after {
-    background-color: transparent;
-   
-  }
+     background-color: transparent;
+
+   }
  }
 
  /* text box */
@@ -159,8 +160,9 @@
    #about {
      padding: 50px 20px 50px 20px;
    }
-   .no-display-text{
-    display: none;
+
+   .no-display-text {
+     display: none;
    }
  }
 
@@ -170,13 +172,6 @@
    width: 10px;
    height: 10px;
  }
-
- @media only screen and (max-width: 768px) {
-   carousel-img {
-     /* height: 250px; */
-   }
- }
-
 
  /* contact */
  #contact {
