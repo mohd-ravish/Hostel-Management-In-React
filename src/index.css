@@ -19,23 +19,25 @@
  }
 
  /* navbar */
- nav {
+ .main-page nav {
    display: flex;
-   padding: 2% 5%;
+   padding: 1.8% 4%;
    justify-content: space-between;
    align-items: center;
+   background-color: transparent;
  }
 
- nav img {
-   padding-bottom: 10px;
+ .main-page nav img {
+   padding-bottom: 14px;
    width: 40px;
-   transform: rotate(-3.1deg);
+   transform: rotate(-3.2deg);
+   cursor: pointer;
  }
 
- nav h2 {
+ .main-page nav h2 {
    font-size: 25px;
-   padding-left: 15px;
-   padding-bottom: 10px;
+   /* padding-left: 15px; */
+   /* padding-bottom: 10px; */
    font-family: 'Alegreya Sans SC', sans-serif;
    color: rgb(13, 108, 39);
  }
@@ -62,7 +64,7 @@
  .nav-links ul li::after {
    content: '';
    width: 0%;
-   height: 3px;
+   height: 3.2px;
    background: rgb(13, 108, 39);
    display: block;
    margin: auto;
@@ -73,8 +75,21 @@
    width: 100%;
  }
 
- nav .icon {
-   display: none;
+ @media(max-width: 768px) {
+   .nav-links {
+     text-align: center;
+   }
+
+   .nav-links ul li {
+     border: 1px solid rgb(255, 255, 255);
+     border-radius: 10px;
+     margin: 4px;
+     padding: 0px;
+   }
+   .nav-links ul li::after {
+    background-color: transparent;
+   
+  }
  }
 
  /* text box */
@@ -118,41 +133,6 @@
    transition: 1s;
  }
 
- @media(max-width: 700px) {
-   .text-box h1 {
-     font-size: 20px;
-   }
-
-   .nav-links ul li {
-     display: block;
-   }
-
-   .nav-links {
-     position: absolute;
-     background: rgb(13, 108, 39);
-     height: 100vh;
-     width: 200px;
-     top: 0;
-     right: -200px;
-     text-align: left;
-     z-index: 2;
-     transition: 1s;
-   }
-
-   nav .icon {
-     display: block;
-     color: #fff;
-     margin: 10px;
-     font-size: 22px;
-     cursor: pointer;
-   }
-
-   .nav-links ul {
-     padding: 30px;
-   }
- }
-
-
  /* about  */
  #about {
    text-align: justify;
@@ -171,11 +151,16 @@
    padding: 10px 0px 0px 10px;
  }
 
- @media only screen and (max-width: 540px) {
+ @media only screen and (max-width: 768px) {
    iframe {
-     width: 335px;
-     height: 250px;
-     padding: 10px 10px 10px 10px;
+     display: none;
+   }
+
+   #about {
+     padding: 50px 20px 50px 20px;
+   }
+   .no-display-text{
+    display: none;
    }
  }
 
@@ -186,12 +171,12 @@
    height: 10px;
  }
 
- @media only screen and (max-width: 540px) {
-  carousel-img{
-  /* height: 250px; */
+ @media only screen and (max-width: 768px) {
+   carousel-img {
+     /* height: 250px; */
+   }
  }
-}
- 
+
 
  /* contact */
  #contact {
@@ -230,7 +215,7 @@
 
  .fa-envelope {
    color: #be5b52;
- } 
+ }
 
  /* background */
  .student-login-page {
@@ -245,11 +230,11 @@
  }
 
  @media (max-width: 768px) {
-  .student-login-page {
-    background-size: cover;
-    background-position: center;
-  }
-}
+   .student-login-page {
+     background-size: cover;
+     background-position: center;
+   }
+ }
 
  .admin-login-page {
    background-image: url(./Components/Images/login-img.png);
@@ -263,11 +248,11 @@
  }
 
  @media (max-width: 768px) {
-  .admin-login-page {
-    background-size: cover;
-    background-position: center;
-  }
-}
+   .admin-login-page {
+     background-size: cover;
+     background-position: center;
+   }
+ }
 
  /* navbar */
  .logo {
@@ -296,6 +281,13 @@
    color: aliceblue;
  }
 
+ @media only screen and (max-width: 768px) {
+   .student-login-page li a {
+     text-align: center;
+     margin-top: 5px;
+   }
+ }
+
  .student-login-page li a:hover {
    background-color: white;
    color: black;
@@ -308,6 +300,13 @@
    font-size: 18px;
    font-family: Verdana;
    color: aliceblue;
+ }
+
+ @media only screen and (max-width: 768px) {
+   .admin-login-page li a {
+     text-align: center;
+     margin-top: 5px;
+   }
  }
 
  .admin-login-page li a:hover {
@@ -421,7 +420,7 @@
    color: rgb(255, 255, 255);
  }
 
- .nav-bg {
+ .about-header {
    position: sticky;
    top: 0;
    z-index: 2;
@@ -444,126 +443,130 @@
  }
 
  /* Rules & Regulations */
-.rules h1{
-  text-align: center;
-  padding-top: 40px;
-}
+ .rules h1 {
+   text-align: center;
+   padding-top: 40px;
+ }
 
-.rules h4{
-  padding-bottom: 10px;
-}
+ .rules h4 {
+   padding-bottom: 10px;
+ }
 
-.rules .head{
-  text-align: center;
-}
+ .rules .head {
+   text-align: center;
+ }
 
-.rules section{
-  text-align: justify;
-  padding: 40px 300px 15px 300px;
-}
+ .rules section {
+   text-align: justify;
+   padding: 40px 300px 15px 300px;
+ }
 
-footer {
-  background-color: rgb(225, 224, 224);
-  padding: 40px 300px 10px 300px;
-}
+ footer {
+   background-color: rgb(225, 224, 224);
+   padding: 40px 300px 10px 300px;
+ }
 
-@media only screen and (max-width: 600px) {
-  .rules section{
-    padding: 15px;
-  }
-  footer {
-    padding: 15px;
-    text-align: center;
-  }
-}
+ @media only screen and (max-width: 768px) {
+   .rules section {
+     padding: 15px;
+   }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  row-gap: 10px;
-  padding-bottom: 30px;
-}
+   footer {
+     padding: 15px;
+     text-align: center;
+   }
+ }
 
-/* Fee/ Schedule/ Payment  */
-.feeSchedule h2 {
-  text-align: left;
-  padding-bottom: 10px;
-}
+ .footer-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   row-gap: 10px;
+   padding-bottom: 30px;
+ }
 
-.feeSchedule h4 {
-  text-align: left;
-  padding-bottom: 10px;
-}
+ /* Fee/ Schedule/ Payment  */
+ .feeSchedule h2 {
+   text-align: left;
+   padding-bottom: 10px;
+ }
 
-.feeSchedule h5 {
-  padding-bottom: 50px;
-}
+ .feeSchedule h4 {
+   text-align: left;
+   padding-bottom: 10px;
+ }
 
-thead td{
-  background-color: black;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
+ .feeSchedule h5 {
+   padding-bottom: 50px;
+ }
 
-.fee {
-  text-align: center;
-  padding: 40px 300px 0px 300px;
-}
-.mess {
-  text-align: center;
-  padding: 120px 300px 0px 300px;
-}
+ thead td {
+   background-color: black;
+   padding-top: 5px;
+   padding-bottom: 5px;
+ }
 
-.schedule {
-  text-align: justify;
-  padding: 120px 300px 0px 300px;
-  line-height: 30px;
-}
+ .fee {
+   text-align: center;
+   padding: 40px 300px 0px 300px;
+ }
 
-.payment {
-  text-align: left;
-  padding-top: 100px;
-}
+ .mess {
+   text-align: center;
+   padding: 120px 300px 0px 300px;
+ }
 
-@media only screen and (max-width: 600px) {
-  .fee {
-    padding: 5px;
-  }
-  .mess {
-    padding: 5px;
-  }
-  .schedule {
-    padding: 8px;
-  }
+ .schedule {
+   text-align: justify;
+   padding: 120px 300px 0px 300px;
+   line-height: 30px;
+ }
 
-  thead td{
-    padding: 2px;
-  }
+ .payment {
+   text-align: left;
+   padding-top: 100px;
+ }
 
-  .feeSchedule h1 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }  
+ @media only screen and (max-width: 768px) {
+   .fee {
+     padding: 5px;
+   }
 
-  .feeSchedule h2 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-  
-  .feeSchedule h4 {
-    text-align: center;
-    padding-bottom: 10px;
-  }
-  
-  .feeSchedule h5 {
-    padding-bottom: 10px;
-  }
+   .mess {
+     padding: 5px;
+   }
 
-}
+   .schedule {
+     padding: 8px;
+   }
 
-/* Mess */
-.mess-table{
-  padding-bottom: 50px;
-}
+   thead td {
+     padding: 2px;
+   }
+
+   .feeSchedule h1 {
+     text-align: center;
+     padding-top: 20px;
+     padding-bottom: 20px;
+   }
+
+   .feeSchedule h2 {
+     text-align: center;
+     padding-top: 20px;
+     padding-bottom: 10px;
+   }
+
+   .feeSchedule h4 {
+     text-align: center;
+     padding-bottom: 10px;
+   }
+
+   .feeSchedule h5 {
+     padding-bottom: 10px;
+   }
+
+ }
+
+ /* Mess */
+ .mess-table {
+   padding-bottom: 50px;
+ }

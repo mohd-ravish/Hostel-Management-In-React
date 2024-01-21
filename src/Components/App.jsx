@@ -14,23 +14,38 @@ import img9 from './Images/carousel/img9.png'
 function App() {
   var date = new Date();
   return (
-    <div>
+    <div className="main-page">
       {/* Navbar */}
       <section className="header">
-        <nav>
-          <a href="/"><img src={logo} alt="logo"></img></a>
-          <h2 className="heading">JMI HOSTEL</h2>
-          <div className="nav-links" id="navLinks">
-            {/* <span className="icon material-symbols-outlined" onClick="hideMenu()">close</span> */}
-            <ul>
-              <li><a href="/">HOME</a></li>
-              <li><a href="/Rules">ABOUT</a></li>
-              <li><a href="#contact">CONTACT</a></li>
-              <li><a href="/StudentLogin">LOGIN</a></li>
-            </ul>
-          </div>
-          {/* <span className="icon material-symbols-outlined" onClick="showMenu()">menu</span> */}
-        </nav>
+        <div class="nav-bg">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <img class="navbar-brand logo" src={logo} alt=""></img>
+              <h2 class="main-heading">JMI HOSTEL</h2>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="nav-links collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="navTxt nav-link" aria-current="page" href="/">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navTxt nav-link" aria-current="page" href="/Rules">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navTxt nav-link" aria-current="page" href="#contact">CONTACT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navTxt nav-link" aria-current="page" href="/StudentLogin">LOGIN</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
         <div className="text-box">
           <h1>Jamia Millia Islamia</h1>
           <p>Discover the Best Hostel Experience at Jamia Millia Islamia"<br></br>A Safe and Comfortable Stay</p>
@@ -66,8 +81,8 @@ function App() {
           It was established mainly in response to the demand of some students of the Aligarh Muslim University for a
           new National Muslim University which would be free from government influence as they felt that the
           administration of Aligarh Muslim University was of pro-British stance.
-          <br></br>
-          It was conceived as a national institution that would offer progressive education and an emphasis on Indian
+        </p>
+        <p class="aboutTxt no-display-text">It was conceived as a national institution that would offer progressive education and an emphasis on Indian
           nationalism to students from all communities, particularly Muslims. Zakir Hussain described "the movement of
           Jamia Millia Islamia as a struggle for education and cultural renaissance that aims to prepare a blueprint
           for Indian Muslims which may focus on Islam but simultaneously evolve a national culture for common Indian.

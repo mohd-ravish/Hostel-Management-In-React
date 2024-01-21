@@ -2,7 +2,7 @@ import logo from "./Images/logo2.png"
 
 function Header() {
     return (
-        <div class="nav-bg">
+        <div class="about-header nav-bg">
             <nav class="navbar navbar-expand-lg" id="about-navbar">
                 <div class="container-fluid">
                     <a href="/"><img class="about-logo" src={logo} alt="logo"></img></a>
