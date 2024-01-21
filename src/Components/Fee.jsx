@@ -5,7 +5,7 @@ function About() {
     return (
         <div>
             <Header />
-            <div class="feeSchedule">
+            <div class="fee feeSchedule">
                 <div class="fee">
                     <h1>HOSTEL FEE STRUCTURE</h1>
                     <h2>Hostel Charges</h2>
