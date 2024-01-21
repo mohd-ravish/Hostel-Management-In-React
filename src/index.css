@@ -510,19 +510,20 @@ thead td{
     padding: 4px;
   }
   .mess {
-    padding: 5px;
+    padding: 4px;
   }
   .schedule {
     padding: 10px;
   }
 
   thead td{
-    padding: 5px;
+    padding: 4px;
   }
 
   .feeSchedule h1 {
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 20px;
   }  
 
   .feeSchedule h2 {
@@ -540,4 +541,9 @@ thead td{
     padding-bottom: 10px;
   }
 
+}
+
+/* Mess */
+.mess-table{
+  padding-bottom: 50px;
 }
