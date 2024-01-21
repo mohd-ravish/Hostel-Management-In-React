@@ -1,7 +1,8 @@
 import logo from "./Images/logo3.png"
+import { useNavigate } from "react-router-dom";
 
 function AdminLogin() {
-
+    const navigate = useNavigate();
     return (
         <div className="admin-login-page">
             {/* navbar */}
@@ -37,7 +38,7 @@ function AdminLogin() {
                     <input type="email" placeholder="Enter Email" required />
                     <p>Password</p>
                     <input type="password" placeholder="Enter Password" required />
-                    <input type="submit" name="submit" value="Login" />
+                    <input onClick={() => { navigate("/Dashboard") }} type="submit" name="submit" value="Login" />
                     <m>Forgotten your password?</m><br></br>
                     <m>Don't have an account?</m>
                 </form>

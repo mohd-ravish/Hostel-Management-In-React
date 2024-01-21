@@ -1,4 +1,5 @@
 function Footer(){
+  var date = new Date();
     return(
         <footer>
         <div class="footer-container">
@@ -16,7 +17,7 @@ function Footer(){
             <div>Khwaja</div>
           </div>
         </div>
-        <p>© 2023 All Rights Reserved Jamia Millia Islamia</p>
+        <p>© {date.getFullYear()} All Rights Reserved Jamia Millia Islamia</p>
       </footer>
     );
 }

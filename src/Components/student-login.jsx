@@ -1,10 +1,10 @@
 import logo from "./Images/logo3.png"
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function StudentLogin() {
-
     const [signupSection, setSignupSection] = useState(false);
-
+    const navigate = useNavigate();
     return (
         <div className="student-login-page">
             {/* navbar */}
@@ -35,7 +35,7 @@ function StudentLogin() {
             {/* Form */}
             <div>
                 <div class="form">
-                {!signupSection ? (
+                {signupSection ? (
                     <form>
                         <h3>Student Account</h3>
                         <p>Email</p>
@@ -45,7 +45,7 @@ function StudentLogin() {
                         <p>Confirm Password</p>
                         <input type="password" placeholder="Confirm Password" required />
                         <input type="submit" name="submit" value="Sign Up" />
-                        <m class="mssg">Already registered? <m onClick={() => { setSignupSection(true) }} >Login</m></m>
+                        <m class="mssg">Already registered? <m onClick={() => { setSignupSection(false) }} >Login</m></m>
                     </form>
                     ) : (
                     <form>
@@ -54,8 +54,8 @@ function StudentLogin() {
                         <input type="email" placeholder="Enter Email" required />
                         <p>Password</p>
                         <input type="password" placeholder="Enter Password" required />
-                        <input type="submit" name="submit" value="Login" />
-                        <m class="mssg">Not registered? <m onClick={() => { setSignupSection(false) }} >Create an account</m></m>
+                        <input onClick={() => { navigate("/Dashboard") }} type="submit" name="submit" value="Login" />
+                        <m class="mssg">Not registered? <m onClick={() => { setSignupSection(true) }} >Create an account</m></m>
                         </form>
                     )}
                 </div>

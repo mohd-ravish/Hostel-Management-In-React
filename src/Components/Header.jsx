@@ -18,17 +18,17 @@ function Header() {
                                 <a class="nav-link" aria-current="page" href="/">Home</a>
                             </li>
                             <li class=" nav-item">
-                                <a class="nav-link" aria-current="page" href="/Mess">Mess</a>
+                                <a class="nav-link" aria-current="page" href="/Fee">Fee Structure</a>
                             </li>
                             <li class=" nav-item">
-                                <a class="nav-link" aria-current="page" href="/Fee">Fee Structure</a>
+                                <a class="nav-link" aria-current="page" href="/Mess">Mess</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Rules">Rules & Regulations</a>
                             </li>
                             <li class=" nav-item">
                                 <form id="form-id" action="chat" method="POST">
-                                    <a class="nav-link" aria-current="page" href="chats"
+                                    <a class="nav-link" aria-current="page" href="/Chats"
                                         onclick="document.getElementById('form-id').submit()">Chats</a>
                                 </form>
                             </li>

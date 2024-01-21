@@ -7,6 +7,8 @@ import AdminLogin from './Components/Admin-Login';
 import Rules from './Components/Rules'
 import Fee from './Components/Fee'
 import Mess from './Components/Mess'
+import Chats from './Components/Chats';
+import Dashboard from './Components/Dashboard/Dashboard'
 
 import {
   createBrowserRouter,
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
   {
     path: "/Mess",
     element: <Mess />
+  },
+  {
+    path: "/Chats",
+    element: <Chats />
+  },
+  {
+    path: "/Dashboard",
+    element: <Dashboard />
   },
 ]);
 
