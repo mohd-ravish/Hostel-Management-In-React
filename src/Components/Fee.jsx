@@ -5,8 +5,8 @@ function About() {
     return (
         <div>
             <Header />
-            <div class="fee feeSchedule">
-                <div>
+            <div class="feeSchedule">
+                <div class="fee">
                     <h1>HOSTEL FEE STRUCTURE</h1>
                     <h2>Hostel Charges</h2>
                     <table class="table table-bordered">
