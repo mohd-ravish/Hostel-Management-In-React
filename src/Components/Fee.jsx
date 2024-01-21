@@ -6,7 +6,7 @@ function About() {
         <div>
             <Header />
             <div class="fee feeSchedule">
-                <div class="fee">
+                <div>
                     <h1>HOSTEL FEE STRUCTURE</h1>
                     <h2>Hostel Charges</h2>
                     <table class="table table-bordered">
