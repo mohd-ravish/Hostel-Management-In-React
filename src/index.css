@@ -579,13 +579,13 @@
 }
 
 .profile-icon{
-  width: 60px;
-  padding: 8px;
+  width: 70px;
+  padding: 12px;
 }
 
 .header-right p{
   font-weight:600;
-  padding-top: 10px;
+  padding-top: 12px;
   font-size: small;
   float: left;
 }
