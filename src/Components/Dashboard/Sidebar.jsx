@@ -1,54 +1,56 @@
-import {BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsListCheck, BsMenuButtonWideFill, BsFillGearFill} from 'react-icons/bs'
+import { useNavigate } from "react-router-dom";
+import { BsGrid1X2Fill } from 'react-icons/bs'
+import { FaUser } from "react-icons/fa";
+import { MdSmsFailed, MdMessage, MdPayments } from "react-icons/md";
+import { RxExit } from "react-icons/rx";
+import { IoCloseCircleOutline } from "react-icons/io5";
+import logo from '../Images/logo3.png'
 
-function Sidebar({openSidebarToggle, OpenSidebar}) {
-  return (
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-        <div className='sidebar-title'>
-            <div className='sidebar-brand'>
-                <BsCart3  className='icon_header'/> SHOP
+function Sidebar({ openSidebarToggle, OpenSidebar }) {
+    const navigate = useNavigate();
+    return (
+        <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
+            <div className='sidebar-title'>
+                <div className='sidebar-brand'>
+                    <img class="navbar-brand" src={logo} alt=""></img><h4>JMI HOSTEL</h4>
+                </div>
+                <span className='icon close_icon' onClick={OpenSidebar}><IoCloseCircleOutline/></span>
             </div>
-            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
-        </div>
 
-        <ul className='sidebar-list'>
-            <li className='sidebar-list-item'>
-                <a href="/Dashboard">
-                    <BsGrid1X2Fill className='icon'/> Dashboard
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="/Dashboard">
-                    <BsFillArchiveFill className='icon'/> Products
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="/Dashboard">
-                    <BsFillGrid3X3GapFill className='icon'/> Categories
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="/Dashboard">
-                    <BsPeopleFill className='icon'/> Customers
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="/Dashboard">
-                    <BsListCheck className='icon'/> Inventory
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="/Dashboard">
-                    <BsMenuButtonWideFill className='icon'/> Reports
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="/Dashboard">
-                    <BsFillGearFill className='icon'/> Setting
-                </a>
-            </li>
-        </ul>
-    </aside>
-  )
+            <ul className='sidebar-list'>
+                <li className='sidebar-list-item'>
+                    <a href="/Dashboard">
+                        <BsGrid1X2Fill className='icon' /> Dashboard
+                    </a>
+                </li>
+                <li className='sidebar-list-item'>
+                    <a href="/Dashboard">
+                        <FaUser className='icon' /> Profile
+                    </a>
+                </li>
+                <li className='sidebar-list-item'>
+                    <a href="/Dashboard">
+                        <MdSmsFailed className='icon' /> Complain
+                    </a>
+                </li>
+                <li className='sidebar-list-item'>
+                    <a href="/Dashboard">
+                        <MdPayments className='icon' /> Payment
+                    </a>
+                </li>
+                <li className='sidebar-list-item'>
+                    <a href="/Dashboard">
+                        <MdMessage className='icon' /> Chats
+                    </a>
+                </li>
+                <li className='sidebar-list-item logout-icon'>
+                    <a href="#" onClick={() => { navigate("/StudentLogin") }}>
+                        <RxExit className='icon' /> Logout
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    )
 }
 
 export default Sidebar

@@ -5,7 +5,6 @@ import Home from './Home'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
-
   const OpenSidebar = () => {
     setOpenSidebarToggle(!openSidebarToggle)
   }

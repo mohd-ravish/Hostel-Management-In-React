@@ -577,6 +577,19 @@
   line-height: 1px;
   font-size: 20px;
 }
+
+.profile-icon{
+  width: 60px;
+  padding: 8px;
+}
+
+.header-right p{
+  font-weight:600;
+  padding-top: 10px;
+  font-size: small;
+  float: left;
+}
+
 .icon_header {
   vertical-align: middle;
   line-height: 1px;
@@ -587,9 +600,8 @@
 }
 
 .close_icon {
-  color: red;
+  /* color: #05865b; */
   margin-left: 30px;
-  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -611,6 +623,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 30px 0 30px;
+  background-color: #e9f5f0;
   box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
 }
 
@@ -623,11 +636,13 @@
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background-color: #263043;
+  background-color: #e9f5f0;
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
+
+
 
 .sidebar-title {
   display: flex;
@@ -642,9 +657,30 @@
 }
 
 .sidebar-brand {
-  margin-top: 15px;
+  display: flex;
+  /* margin-top: 15px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 700; */
+}
+
+.sidebar-brand img{
+   width: 50px;
+   transform: rotate(2deg);
+   cursor: pointer;
+}
+
+.logout-icon{
+  position: fixed; /* This ensures that the icon stays fixed on the screen */
+  bottom: 0; /* Places the icon at the bottom */
+  /* transform: translateX(-50%);  */
+}
+
+.sidebar-brand h4{
+  color: white;
+  padding-top: 10px;
+  padding-left: 12px;
+  font-weight: bold;
+  color: #05865b;
 }
 
 .sidebar-list {
@@ -664,87 +700,16 @@
 
 .sidebar-list-item > a {
   text-decoration: none;
-  color: #9e9ea4;
+  color: #8b8b8b;
 }
 
 .sidebar-responsive {
   display: inline !important;
   position: absolute;
-  /*
-    we want the z-index of the sidebar higher so that
-    the charts are not showing over the sidebar 
-    on small screens
-  */
   z-index: 12 !important;
 }
 
 /* End Sidebar  */
-
-
-/* Main  */  
-.main-container {
-  grid-area: main;
-  overflow-y: auto;
-  padding: 20px 20px;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.main-title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.main-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
-  margin: 15px 0;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-
-.card:first-child {
-  background-color: #2962ff;
-}
-
-.card:nth-child(2) {
-  background-color: #ff6d00;
-}
-
-.card:nth-child(3) {
-  background-color: #2e7d32;
-}
-
-.card:nth-child(4) {
-  background-color: #d50000;
-}
-
-.card-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.card-inner > .card_icon {
-  font-size: 25px;
-}
-
-.charts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 60px;
-  height: 300px;
-}
-
-/* End Main  */
-
 
 /* Medium <= 992px */
   
@@ -769,25 +734,247 @@
     display: inline;
   }
 }
-/* Small <= 768px */
-  
-@media screen and (max-width: 768px) {
-  .main-cards {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 0;
-  }
-
-  .charts {
-    grid-template-columns: 1fr;
-    margin-top: 30px;
-  }
-}
-
-/* Extra Small <= 576px */
 
 @media screen and (max-width: 576px) {
   .hedaer-left {
     display: none;
+  }
+}
+
+/*------------------ ROOT VARAIBLES -----------------*/
+:root {
+  --color-primary: #19ac6f;
+  --color-danger: #ff7782;
+  --color-success: #05865b;
+  --color-warning: #ffbb55;
+  --color-white: #ffffffd6;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dceleb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #3cafd1;
+  --color-dark-variant: #677483;
+  --color-background: #e9f5f0;
+  --color-newgreen: rgba(13, 92, 26, 0.895);
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+/* Registration */
+
+/* .registration form {
+  overflow-y: scroll;
+} */
+
+.registration form::-webkit-scrollbar {
+  display: none;
+}
+
+.registration form .fields .input-field {
+  width: calc(100% / 2 - 15px);
+}
+
+.registration {
+  margin-top: 1.4rem;
+  /* position: relative; */
+  /* max-width: 900px; */
+  width: 100%;
+  /* height: auto; */
+  /* border-radius: 6px; */
+  padding: 30px;
+  /* margin: 0 auto; */
+  /* background-color: var(--color-white); */
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+}
+ 
+.registration h1 {
+  color: var(--color-success);
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.registration form {
+  position: relative;
+  margin-top: 16px;
+  min-height: 535px;
+  background-color: var(--color-white);
+  /* overflow: hidden; */
+}
+
+.registration form .dash-form {
+  position: absolute;
+  /* background-color: var(--color-white); */
+  /* transition: 0.3s ease; */
+}
+
+.registration form .form.second {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
+.registration form.secActive .form.second {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.registration form.secActive .form.first {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+
+.registration form .title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: var(--color-dark);
+}
+
+.registration form .fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+.registration form .fields .input-field {
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  padding: 4px;
+}
+
+.registration .input-field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-info-dark);
+}
+
+.registration .input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-dark);
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-white);
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+
+.registration .input-field input :focus,
+.input-field select:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.registration .input-field select,
+.input-field input[type="date"] {
+  color: #707070;
+}
+
+.registration .input-field input[type="file"] {
+  padding-top: 3.5%;
+  justify-content: center;
+  color: #707070;
+}
+
+.registration .input-field input[type="date"]:valid {
+  color: var(--color-dark);
+}
+
+.registration form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: var(--color-success);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.registration form .btnText {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.registration form button:hover {
+  background-color: var(--color-newgreen);
+}
+
+.registration form button i,
+form .backBtn i {
+  margin: 0 6px;
+}
+
+.registration form .backBtn i {
+  transform: rotate(180deg);
+}
+
+.registration form .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.registration form .buttons button,
+.backBtn {
+  margin-right: 14px;
+}
+
+@media (max-width: 768px) {
+  .registration {
+    margin-top: 0rem;
+    /* position: relative; */
+    /* max-width: 900px; */
+    width: 100%;
+    /* height: auto; */
+    /* border-radius: 6px; */
+    padding: 30px;
+    /* margin: 0 auto; */
+    /* background-color: var(--color-white); */
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+  }
+  .registration form .title {
+    padding-top: 30px;
+  }
+  .registration form .fields .input-field {
+    box-sizing: border-box;
+    display: unset;
+    width: 100%;
+    flex-direction: unset;
+    padding: 0px;
+  }
+  .registration .fields{
+    flex-direction: column;
+  }
+  .registration .input-field label {
+    padding-right: 10px;
   }
 }

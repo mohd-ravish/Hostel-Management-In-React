@@ -1,5 +1,5 @@
-import {BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify}
- from 'react-icons/bs'
+import {BsJustify} from 'react-icons/bs'
+import profileIcon from '../Images/student-profile.png'
 
 function Header({OpenSidebar}) {
   return (
@@ -8,12 +8,13 @@ function Header({OpenSidebar}) {
             <BsJustify className='dash-icon' onClick={OpenSidebar}/>
         </div>
         <div className='header-left'>
-            <BsSearch  className='icon'/>
+            {/* <BsSearch  className='icon'/> */}
         </div>
         <div className='header-right'>
-            <BsFillBellFill className='icon'/>
-            <BsFillEnvelopeFill className='icon'/>
-            <BsPersonCircle className='icon'/>
+            {/* <BsFillBellFill className='icon'/>
+            <BsFillEnvelopeFill className='icon'/> */}
+            <p>Hey, Username<br></br>Student</p>
+            <img className='profile-icon' src={profileIcon} alt=''></img>
         </div>
     </header>
   )
