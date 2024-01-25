@@ -6,7 +6,7 @@ import { RxExit } from "react-icons/rx";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import logo from '../Images/logo3.png'
 
-function Sidebar({ openSidebarToggle, OpenSidebar }) {
+function Sidebar({ handleClick, openSidebarToggle, OpenSidebar }) {
     const navigate = useNavigate();
     return (
         <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
@@ -19,22 +19,22 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
             <ul className='sidebar-list'>
                 <li className='sidebar-list-item'>
-                    <a href="/Dashboard">
+                    <a href="#">
                         <BsGrid1X2Fill className='icon' /> Dashboard
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="/Dashboard">
+                    <a href="#" onClick={()=>{handleClick('register'); OpenSidebar()}}>
                         <FaUser className='icon' /> Profile
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="/Dashboard">
+                    <a href="#" onClick={()=>{handleClick('complain'); OpenSidebar()}}>
                         <MdSmsFailed className='icon' /> Complain
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="/Dashboard">
+                    <a href="#" onClick={()=>{handleClick('payment'); OpenSidebar()}}>
                         <MdPayments className='icon' /> Payment
                     </a>
                 </li>
