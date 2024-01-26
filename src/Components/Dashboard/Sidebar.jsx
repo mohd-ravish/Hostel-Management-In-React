@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { BsGrid1X2Fill } from 'react-icons/bs'
 import { FaUser } from "react-icons/fa";
@@ -6,7 +7,7 @@ import { RxExit } from "react-icons/rx";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import logo from '../Images/logo3.png'
 
-function Sidebar({ handleClick, openSidebarToggle, OpenSidebar }) {
+function Sidebar({ handleDashboardAgain, handleDashboard, handleClick, openSidebarToggle, OpenSidebar }) {
     const navigate = useNavigate();
     return (
         <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
@@ -14,32 +15,32 @@ function Sidebar({ handleClick, openSidebarToggle, OpenSidebar }) {
                 <div className='sidebar-brand'>
                     <img class="navbar-brand" src={logo} alt=""></img><h4>JMI HOSTEL</h4>
                 </div>
-                <span className='icon close_icon' onClick={OpenSidebar}><IoCloseCircleOutline/></span>
+                <span className='icon close_icon' onClick={OpenSidebar}><IoCloseCircleOutline /></span>
             </div>
 
             <ul className='sidebar-list'>
                 <li className='sidebar-list-item'>
-                    <a href="#">
+                    <a href="#" onClick={() => { handleClick('home'); OpenSidebar(); handleDashboardAgain()}}>
                         <BsGrid1X2Fill className='icon' /> Dashboard
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="#" onClick={()=>{handleClick('register'); OpenSidebar()}}>
+                    <a href="#" onClick={() => { handleClick('register'); OpenSidebar(); handleDashboard()}}>
                         <FaUser className='icon' /> Profile
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="#" onClick={()=>{handleClick('complain'); OpenSidebar()}}>
+                    <a href="#" onClick={() => { handleClick('complain'); OpenSidebar(); handleDashboard() }}>
                         <MdSmsFailed className='icon' /> Complain
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="#" onClick={()=>{handleClick('payment'); OpenSidebar()}}>
+                    <a href="#" onClick={() => { handleClick('payment'); OpenSidebar(); handleDashboard() }}>
                         <MdPayments className='icon' /> Payment
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="/Dashboard">
+                    <a href="#">
                         <MdMessage className='icon' /> Chats
                     </a>
                 </li>

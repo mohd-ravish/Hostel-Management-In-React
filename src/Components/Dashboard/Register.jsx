@@ -38,7 +38,7 @@
                                         <option>Female</option>
                                         <option>Others</option>
                                     </select> */}
-                                    <input name="mob_no" type="number" placeholder="Enter mobile number"
+                                    <input name="mob_no" type="number" placeholder="Select Gender"
                                         required />
                                 </div>
 
