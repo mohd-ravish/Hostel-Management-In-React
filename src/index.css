@@ -970,19 +970,21 @@
    }
 
    .registration form .fields .input-field {
-     box-sizing: border-box;
-     display: unset;
+     /* box-sizing: border-box; */
+     /* display: unset; */
      width: 100%;
-     flex-direction: unset;
+     /* flex-direction: unset; */
      padding: 0px;
    }
 
    .registration .fields {
-     flex-direction: column;
+     flex-wrap: wrap;
+     /* display: flex; */
+     /* flex-direction: column; */
    }
 
    .registration .input-field label {
-     padding-right: 10px;
+     padding-top: 5px;
    }
  }
 
@@ -1010,6 +1012,7 @@
  }
 
  complain .contain label {
+  padding-bottom: 5px;
    font-size: 12px;
    font-weight: 500;
    color: var(--color-info-dark);
@@ -1023,19 +1026,19 @@
    font-size: 35px;
  }
 
- complain .contain input{
-  color: var(--color-dark);
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  font-size: 15px;
-  text-transform: none;
-  outline: none;
-  font-weight: 400;
-  border-radius: 5px;
-  border: 1px solid var(--color-dark);
-  background-color: var(--color-white);
-}
+ complain .contain input {
+   color: var(--color-dark);
+   width: 100%;
+   border: 1px solid #ccc;
+   padding: 10px 15px;
+   font-size: 15px;
+   text-transform: none;
+   outline: none;
+   font-weight: 400;
+   border-radius: 5px;
+   border: 1px solid var(--color-dark);
+   background-color: var(--color-white);
+ }
 
  complain .inputBox {
    margin: 15px 0;
@@ -1079,107 +1082,107 @@
    background-color: var(--color-newgreen);
  }
 
-/* Payment  */
+ /* Payment  */
 
  payment {
-  margin-top: 3.5rem;
-}
+   margin-top: 3.5rem;
+ }
 
-.payment-container {
-  margin-top: 1.4rem;
-  position: relative;
-  max-width: 900px;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  padding: 30px;
-  margin: 0 auto;
-  background-color: var(--color-white);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
+ .payment-container {
+   margin-top: 1.4rem;
+   position: relative;
+   max-width: 900px;
+   width: 100%;
+   height: auto;
+   border-radius: 6px;
+   padding: 30px;
+   margin: 0 auto;
+   background-color: var(--color-white);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ }
 
-.payment-container form {
-  padding: 0 2rem;
-  width: 700px;
-  background: var(--color-white);
-}
+ .payment-container form {
+   padding: 0 2rem;
+   width: 700px;
+   background: var(--color-white);
+ }
 
-.payment-container form .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-}
+ .payment-container form .row {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 50px;
+ }
 
-.payment-container form .row .col {
-  flex: 1 1 250px;
-}
+ .payment-container form .row .col {
+   flex: 1 1 250px;
+ }
 
-.payment-container form .row .col .title {
-  color: var(--color-success);
-  font-family: 'Poppins';
-  font-weight: 450;
-  font-size: 35px;
-}
+ .payment-container form .row .col .title {
+   color: var(--color-success);
+   font-family: 'Poppins';
+   font-weight: 450;
+   font-size: 35px;
+ }
 
-.payment-container form .row .col .inputBox {
-  margin: 15px 0;
-}
+ .payment-container form .row .col .inputBox {
+   margin: 15px 0;
+ }
 
-.payment-container form .row .col .inputBox label {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--color-info-dark);
-}
+ .payment-container form .row .col .inputBox label {
+   font-size: 12px;
+   font-weight: 500;
+   color: var(--color-info-dark);
+ }
 
-.payment-container form .row .col .inputBox input {
-  width: 100%;
-  color: var(--color-dark);
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  font-size: 15px;
-  text-transform: none;
-  outline: none;
-  font-weight: 400;
-  border-radius: 5px;
-  border: 1px solid var(--color-dark);
-  background-color: var(--color-white);
-}
+ .payment-container form .row .col .inputBox input {
+   width: 100%;
+   color: var(--color-dark);
+   border: 1px solid #ccc;
+   padding: 10px 15px;
+   font-size: 15px;
+   text-transform: none;
+   outline: none;
+   font-weight: 400;
+   border-radius: 5px;
+   border: 1px solid var(--color-dark);
+   background-color: var(--color-white);
+ }
 
-.payment-container form .row .col .inputBox input:focus {
-  border: 1px solid #000;
-}
+ .payment-container form .row .col .inputBox input:focus {
+   border: 1px solid #000;
+ }
 
-.payment-container form .row .col .flex {
-  display: flex;
-  gap: 15px;
-}
+ .payment-container form .row .col .flex {
+   display: flex;
+   gap: 15px;
+ }
 
-.payment-container form .row .col .flex .inputBox {
-  margin-top: 5px;
-}
+ .payment-container form .row .col .flex .inputBox {
+   margin-top: 5px;
+ }
 
-.payment-container form .row .col .inputBox img {
-  height: 34px;
-  margin-top: 5px;
-  filter: drop-shadow(0 0 1px #000);
-}
+ .payment-container form .row .col .inputBox img {
+   height: 34px;
+   margin-top: 5px;
+   filter: drop-shadow(0 0 1px #000);
+ }
 
-.payment-container form .submit-btn {
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  max-width: 200px;
-  width: 100%;
-  border: none;
-  outline: none;
-  color: var(--color-white);
-  border-radius: 5px;
-  margin: 25px 0;
-  background-color: var(--color-success);
-  transition: all 0.3s linear;
-  cursor: pointer;
-}
+ .payment-container form .submit-btn {
+   align-items: center;
+   justify-content: center;
+   height: 45px;
+   max-width: 200px;
+   width: 100%;
+   border: none;
+   outline: none;
+   color: var(--color-white);
+   border-radius: 5px;
+   margin: 25px 0;
+   background-color: var(--color-success);
+   transition: all 0.3s linear;
+   cursor: pointer;
+ }
 
-.payment-container form .submit-btn:hover {
-  background-color: var(--color-newgreen);
-}
+ .payment-container form .submit-btn:hover {
+   background-color: var(--color-newgreen);
+ }
