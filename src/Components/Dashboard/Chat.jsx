@@ -2,7 +2,7 @@ function Chat(){
     return(
         <chat>
             <div class="chat-container">
-                <h3 class="title">Send a message anonymously</h3>
+                <h3 class="title">Send message anonymously</h3>
                 <form>
                     <div class="input-box">
                         <input type="text" class="message-chat" name="chat" placeholder="Enter a message..." autocomplete="off" />
