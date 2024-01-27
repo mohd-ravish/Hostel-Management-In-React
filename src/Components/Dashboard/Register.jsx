@@ -31,15 +31,15 @@
                                 </div>
 
                                 <div class="input-field">
-                                    <label>Gender</label>
-                                    {/* <select required name="gen">
+                                    <label >Gender</label>
+                                    <select required>
                                         <option disabled selected>Select gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>Others</option>
-                                    </select> */}
-                                    <input name="mob_no" type="number" placeholder="Select Gender"
-                                        required />
+                                    </select>
+                                    {/* <input name="mob_no" type="number" placeholder="Select Gender"
+                                        required /> */}
                                 </div>
 
                                 <div class="input-field">

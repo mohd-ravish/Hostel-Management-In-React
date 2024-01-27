@@ -40,7 +40,7 @@ function Sidebar({ handleDashboardAgain, handleDashboard, handleClick, openSideb
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="#">
+                    <a href="#" onClick={() => { handleClick('chat'); OpenSidebar(); handleDashboard() }}>
                         <MdMessage className='icon' /> Chats
                     </a>
                 </li>

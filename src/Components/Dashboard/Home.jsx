@@ -12,6 +12,9 @@ function Home() {
         return () => clearInterval(intervalId);
     }, []);
     const formattedDateTime = currentDateTime.toLocaleString(); // You can adjust the format as needed
+    const navigateTo = (url) => {
+        window.location.href = url;
+    };
     return (
         <main>
             <h1>Dashoard</h1>
@@ -30,8 +33,7 @@ function Home() {
                                 <circle cx='46' cy='44' r='36'></circle>
                             </svg>
                             <div class="number">
-                                <button type="button" class="go"
-                                    onclick="location.href='https://www.jmi.ac.in/'">Go</button>
+                                <button type="button" class="go" onClick={() => navigateTo('https://www.jmi.ac.in/')}>Go</button>
                             </div>
                         </div>
 
@@ -50,7 +52,7 @@ function Home() {
                                 <circle cx='48' cy='44' r='36'></circle>
                             </svg>
                             <div class="number">
-                                <button type="button" class="go" onclick="location.href='https://www.jmi.ac.in/'">Go</button>
+                                <button type="button" class="go" onClick={() => navigateTo('https://jmicoe.in/')}>Go</button>
                             </div>
                         </div>
                     </div>
@@ -68,8 +70,7 @@ function Home() {
                                 <circle cx='48' cy='44' r='36'></circle>
                             </svg>
                             <div class="number">
-                                <button type="button" class="go"
-                                    onclick="location.href='https://www.jmi.ac.in/'">Go</button>
+                                <button type="button" class="go" onClick={() => navigateTo('http://jmiregular.ucanapply.com/universitysystem/student/')}>Go</button>
                             </div>
                         </div>
                     </div>
