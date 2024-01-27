@@ -675,7 +675,7 @@
  }
 
  .logout-icon {
-   position: fixed;
+   position: absolute;
    /* This ensures that the icon stays fixed on the screen */
    bottom: 0;
    /* Places the icon at the bottom */
@@ -901,6 +901,7 @@
  @media (max-width: 768px) {
    main .insights {
      margin-top: 10px;
+     margin-bottom: 20px;
      grid-template-columns: 1fr;
      gap: 0;
    }

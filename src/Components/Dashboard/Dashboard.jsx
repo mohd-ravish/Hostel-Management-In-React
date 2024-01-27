@@ -10,8 +10,8 @@ function Dashboard() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
   const OpenSidebar = () => {
     if (window.innerWidth <= 768) {
-      setOpenSidebarToggle(!openSidebarToggle)
-
+      setOpenSidebarToggle(!openSidebarToggle);
+      // document.body.style.overflow = 'hidden';
     }
   }
   const initialState = {
@@ -33,6 +33,7 @@ function Dashboard() {
 
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true });
+    // document.body.style.overflow = 'auto';
   }
   // const [cssEnabled, setCssEnabled] = useState(false);
   // const handleCss = () => {
