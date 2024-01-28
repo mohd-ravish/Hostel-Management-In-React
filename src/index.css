@@ -909,14 +909,16 @@
 
  @media (max-width: 768px) {
   main {
-    margin: 1rem 1rem;
+    margin: 0rem;
+    padding: 1rem;
   }
 
    main .insights {
      margin-top: 10px;
      margin-bottom: 20px;
-     grid-template-columns: 1fr;
-     gap: 0;
+     display: unset;
+     /* grid-template-columns: 1fr; */
+     /* gap: 0; */
    }
 
    main .dashboard-card {
@@ -1391,7 +1393,7 @@
    }
 
    .payment-container form {
-     padding: 0 1.5rem;
+     padding: 0 2rem;
    }
 
    .qr-img {
@@ -1400,7 +1402,7 @@
    }
 
    .payment-container img {
-     padding: 10px;
+     padding: 20px;
      height: 400px;
    }
  }
