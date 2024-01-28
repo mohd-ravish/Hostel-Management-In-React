@@ -736,7 +736,7 @@
    }
 
    #sidebar {
-    position: fixed;
+     position: fixed;
      display: none;
    }
 
@@ -748,7 +748,7 @@
      display: inline;
    }
 
-   .close_icon{}
+   .close_icon {}
  }
 
  @media screen and (max-width: 576px) {
@@ -792,7 +792,7 @@
 
  /* Home */
  main {
-   margin: 1.5rem 1.5rem;
+   margin: 1.5rem;
  }
 
  main .date {
@@ -908,17 +908,22 @@
  }
 
  @media (max-width: 768px) {
-  main {
-    margin: 0rem;
-    padding: 1rem;
-  }
+   main {
+     margin: 0px;
+   }
+   main .date{
+    margin-left: 20px;
+   }
+   main h1 {
+     padding: 20px 0px 0px 20px;
+   }
 
    main .insights {
-     margin-top: 10px;
-     margin-bottom: 20px;
-     display: unset;
-     /* grid-template-columns: 1fr; */
-     /* gap: 0; */
+     padding: 20px;
+     /* margin-top: 10px;
+     margin-bottom: 20px; */
+     grid-template-columns: 1fr;
+     gap: 0;
    }
 
    main .dashboard-card {
