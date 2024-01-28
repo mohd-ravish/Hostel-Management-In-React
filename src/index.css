@@ -792,7 +792,7 @@
 
  /* Home */
  main {
-   /* margin: 1.5rem 1.5rem; */
+   margin: 1.5rem 1.5rem;
  }
 
  main .date {
@@ -908,6 +908,10 @@
  }
 
  @media (max-width: 768px) {
+  main {
+    margin: 1rem 1rem;
+  }
+
    main .insights {
      margin-top: 10px;
      margin-bottom: 20px;
@@ -1387,7 +1391,7 @@
    }
 
    .payment-container form {
-     padding: 0 2rem;
+     padding: 0 1.5rem;
    }
 
    .qr-img {
@@ -1396,7 +1400,7 @@
    }
 
    .payment-container img {
-     padding: 20px;
+     padding: 10px;
      height: 400px;
    }
  }
