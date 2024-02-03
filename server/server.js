@@ -11,7 +11,7 @@ app.use(express.json())
 require("dotenv").config()
 
 // Port
-const PORT = process.env.PORT | 4500
+const PORT = process.env.PORT;
 
 // Connection
 // For MongoCompass : mongodb://127.0.0.1:27017/usermanagement
@@ -202,59 +202,3 @@ app.get("/readChats", async (req, res) => {
 
 // Server
 app.listen(PORT, () => console.log(`SERVER IS RUNNING ON PORT ${PORT}`))
-
-
-
-
-// {
-//     "name": "server",
-//     "version": "0.1.0",
-//     "private": true,
-//     "main": "server.js",
-//     "dependencies": {
-//       "@testing-library/jest-dom": "^5.17.0",
-//       "@testing-library/react": "^13.4.0",
-//       "@testing-library/user-event": "^13.5.0",
-//       "axios": "^1.6.7",
-//       "bcrypt": "^5.1.1",
-//       "cors": "^2.8.5",
-//       "dotenv": "^16.4.1",
-//       "express": "^4.18.2",
-//       "jsonwebtoken": "^9.0.2",
-//       "mongodb": "^6.3.0",
-//       "mongoose": "^8.1.1",
-//       "nodemon": "^3.0.3",
-//       "react": "^18.2.0",
-//       "react-dom": "^18.2.0",
-//       "react-scripts": "5.0.1",
-//       "react-toastify": "^10.0.4",
-//       "web-vitals": "^2.1.4"
-//     },
-//     "scripts": {
-//       "start": "node server.js",
-//       "build": "react-scripts build",
-//       "test": "echo \"Error: no test specified\" && exit 1",
-//       "eject": "react-scripts eject",
-//       "server": "nodemon server.js"
-//     },
-//     "eslintConfig": {
-//       "extends": [
-//         "react-app",
-//         "react-app/jest"
-//       ]
-//     },
-//     "browserslist": {
-//       "production": [
-//         ">0.2%",
-//         "not dead",
-//         "not op_mini all"
-//       ],
-//       "development": [
-//         "last 1 chrome version",
-//         "last 1 firefox version",
-//         "last 1 safari version"
-//       ]
-//     }
-//   }
-  
-  

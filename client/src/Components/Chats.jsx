@@ -9,7 +9,7 @@ function Chats() {
     useEffect(() => {
         const fetchChats = async () => {
             try {
-                await Axios.get("https://jmi-hostel-management-server.vercel.app/readChats").then((res) => {
+                await Axios.get("http://localhost:4500/readChats").then((res) => {
                     setChats(res.data)
                 })
             } catch (err) {
