@@ -21,7 +21,7 @@ function Chat() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (Object.values(chats).every(value => value.length > 0)) {
-            await Axios.post("http://localhost:4500/chats", chats)
+            await Axios.post("https://jmi-hostel-management-server.onrender.com/chats", chats)
                 .then(res => {
                     if (res.data === "Message sent") {
                         toast.success("Sent!", {

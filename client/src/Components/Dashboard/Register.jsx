@@ -36,7 +36,7 @@ function Register() {
 
     const handleSubmit = async (event) => {
         if (Object.values(studentDetails).every(value => value.length > 0)) {
-            await Axios.post("http://localhost:4500/register", studentDetails)
+            await Axios.post("https://jmi-hostel-management-server.onrender.com/register", studentDetails)
                 .then(res => {
                     if (res.data === "Details submitted") {
                         window.location.reload(false)

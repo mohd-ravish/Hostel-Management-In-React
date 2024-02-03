@@ -39,7 +39,7 @@ function StudentLogin() {
     const handleSignupSubmit = async (event) => {
         event.preventDefault();
         if (Object.values(studentSignupData).every(value => value.length > 0)) {
-            await Axios.post("http://localhost:4500/signup", studentSignupData)
+            await Axios.post("https://jmi-hostel-management-server.onrender.com/signup", studentSignupData)
                 .then(res => {
                     if (res.data === "User registered") {
                         toast.success("User registered!", {
@@ -78,7 +78,7 @@ function StudentLogin() {
     const handleLoginSubmit = async (event) => {
         event.preventDefault();
         if (Object.values(studentLoginData).every(value => value.length > 0)) {
-            await Axios.post("http://localhost:4500/login", studentLoginData)
+            await Axios.post("https://jmi-hostel-management-server.onrender.com/login", studentLoginData)
                 .then(res => {
                     if (res.data === "User not found") {
                         toast.error("User not found!", {
