@@ -1,27 +1,16 @@
-import Header from "./Header";
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import { fetchChats } from '../../ApiHandler/chatsFunctions'
 
 function Chats() {
     const [chats, setChats] = useState([]);
 
-    // Show Data
+    // Show chats
     useEffect(() => {
-        const fetchChats = async () => {
-            try {
-                await Axios.get("https://jmi-hostel-management-server.onrender.com/readChats").then((res) => {
-                    setChats(res.data)
-                })
-            } catch (err) {
-                console.error("Error fetching chats: ", err);
-            }
-        };
-        fetchChats();
+        fetchChats(setChats);
     }, []);
 
     return (
         <div className="chats">
-            <Header />
             <div class="main-card">
                 {chats.map((chat) => {
                     return (

@@ -1,53 +1,31 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import './index.css';
-import App from './Components/App';
-import StudentLogin from './Components/student-login';
-import AdminLogin from './Components/Admin-Login';
-import Rules from './Components/Rules'
-import Fee from './Components/Fee'
-import Mess from './Components/Mess'
-import Chats from './Components/Chats';
+import Home from './Components/Home/Home';
+import Auth from './Components/Auth/Auth';
+import About from './Components/About/About'
 import Dashboard from './Components/Dashboard/Dashboard'
 
 import {
   createBrowserRouter,
   RouterProvider,
-  // Route,
-  // Link,
 } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <Home />
   },
   {
-    path: "/StudentLogin",
-    element: <StudentLogin />
+    path: "/auth",
+    element: <Auth />
   },
   {
-    path: "/AdminLogin",
-    element: <AdminLogin />
+    path: "/about",
+    element: <About />
   },
   {
-    path: "/Rules",
-    element: <Rules />
-  },
-  {
-    path: "/Fee",
-    element: <Fee />
-  },
-  {
-    path: "/Mess",
-    element: <Mess />
-  },
-  {
-    path: "/Chats",
-    element: <Chats />
-  },
-  {
-    path: "/Dashboard",
+    path: "/dashboard",
     element: <Dashboard />
   },
 ]);

@@ -1,10 +1,8 @@
-import Header from "./Header";
 import Footer from "./Footer";
 
 function About() {
     return (
         <div>
-            <Header />
             <div className="rules">
                 <h1>HOSTEL RULES AND REGULATIONS</h1>
                 <h6 class="head">Please read the following rules and regulations carefully. Violation of any of these rules may

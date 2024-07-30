@@ -1,10 +1,8 @@
-import Header from "./Header";
 import Footer from "./Footer";
 
 function Mess() {
     return (
         <div>
-            <Header />
             <div class="fee feeSchedule">
                 <h1>Minimum Expected Menu</h1>
                 <div className="mess-table">

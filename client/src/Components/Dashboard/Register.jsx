@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Axios from "axios";
+import {handleRegistration} from './../../ApiHandler/registerFunctions'
 
 function Register() {
     const [studentDetails, setStudentDetails] = useState({
@@ -32,21 +32,6 @@ function Register() {
                 ...prev, [name]: value
             }
         })
-    }
-
-    const handleSubmit = async (event) => {
-        if (Object.values(studentDetails).every(value => value.length > 0)) {
-            await Axios.post("https://jmi-hostel-management-server.onrender.com/register", studentDetails)
-                .then(res => {
-                    if (res.data === "Details submitted") {
-                        window.location.reload(false)
-                    } else {
-                        toast.error("Error!", {
-                            position: "top-center"
-                        })
-                    }
-                })
-        }
     }
 
     return (
@@ -168,7 +153,7 @@ function Register() {
                                     <input name="wardno" type="number" placeholder="Enter ward number" onChange={handleChange} required />
                                 </div>
                             </div>
-                            <button onClick={handleSubmit} class="nextBtn">
+                            <button onClick={(e)=>handleRegistration(e, studentDetails)} class="nextBtn">
                                 <span class="btnText">Submit</span>
                                 <i class="uil uil-navigator"></i>
                             </button>

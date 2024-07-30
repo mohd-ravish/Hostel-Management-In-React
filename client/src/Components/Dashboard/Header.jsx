@@ -1,7 +1,7 @@
 import {BsJustify} from 'react-icons/bs'
 import profileIcon from '../Images/student-profile.png'
 
-function Header({OpenSidebar}) {
+function Header({OpenSidebar, username}) {
   return (
     <header className='dash-header'>
         <div className='menu-icon'>
@@ -13,7 +13,7 @@ function Header({OpenSidebar}) {
         <div className='header-right'>
             {/* <BsFillBellFill className='icon'/>
             <BsFillEnvelopeFill className='icon'/> */}
-            <p>Hey, Username<br></br>Student</p>
+            <p>Hey, {username}<br></br>Student</p>
             <img className='profile-icon' src={profileIcon} alt=''></img>
         </div>
     </header>
