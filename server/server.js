@@ -8,12 +8,13 @@ const chatsRoutes = require("./routes/chatsRoutes");
 
 const app = express();
 
-app.use(cors({
-  origin: ["http://localhost:3000"],
-  methods: ["POST", "GET"],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ["http://localhost:3000"],
+//   methods: ["POST", "GET"],
+//   credentials: true
+// }));
 
+app.use(cors());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
